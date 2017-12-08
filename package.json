@@ -1,17 +1,17 @@
 {
-  "name": "vue-2.0-simple-routing-example",
+  "name": "zinneria",
   "description": "A Vue.js project",
-  "author": "Chris Fritz <chrisvfritz@gmail.com>",
+  "author": "Brad Steward <brad.steward@outlook.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --watch --progress --colors",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "predeploy": "npm run build",
-    "deploy": "surge --project . --domain vue-2-simple-routing-example.surge.sh"
+    "deploy": "surge --project . --domain zinneria.surge.sh"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
-    "fullcalendar": "^3.7.0",
+    "cross-env": "^5.1.1",
     "vue": "^2.3.3"
   },
   "devDependencies": {
@@ -19,7 +19,6 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync-webpack-plugin": "^1.2.0",
-    "cross-env": "^4.0.0",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.1",
