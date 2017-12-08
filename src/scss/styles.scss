@@ -1,0 +1,39 @@
+@import '_variables';
+@import '_components';
+@import 'vendor/_vendorBundle';
+
+html {
+  font-size: 12px;
+  overflow-x: hidden;
+  background-color: black;
+  &::after {
+    content: '';
+    background-image: url('https://imgur.com/L6GNJ1S.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+}
+
+body {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1140px;
+  padding: 10px;
+  background: #212121;
+  color: white;
+
+  .panel {
+    background: #303030;
+    .sub-panel {
+      background: #424242;
+    }
+  }
+}

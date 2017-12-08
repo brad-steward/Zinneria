@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500);@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);.component {
+  background-color: #f5f5dc;
+  padding: 10px 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; }
+  .component *:not(h3) {
+    margin: 0 auto; }
+
+.component-header {
+  font-family: Courier New, Courier, monospace;
+  font-size: 1.2rem;
+  color: #000057;
+  width: auto; }
+
+.frm-button {
+  color: white;
+  background-color: #323283;
+  padding: 10px 25px;
+  font-size: 1.4rem;
+  font-family: "Raleway", sans-serif; }
+
+.nav-link {
+  font-size: 20px; }
+  .nav-link a {
+    color: white;
+    background-color: #323283;
+    text-decoration: none;
+    padding: 10% 15%;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1em; }
+    .nav-link a:hover {
+      text-decoration: none !important;
+      color: #323283;
+      background-color: white;
+      font-size: 1.1em;
+      padding: 10% 14%;
+      transition: background 0.5s ease-in-out; }
+
+.page-header {
+  font-family: "Ubuntu" sans-serif;
+  font-size: 2rem;
+  color: #323283; }
+
+html {
+  font-size: 12px; }
+
+* {
+  background-color: red !important; }
+
+/*# sourceMappingURL=styles.css.map*/
