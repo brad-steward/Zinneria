@@ -1,106 +1,153 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);
-.component {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500);@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);.component {
   background-color: #f5f5dc;
   padding: 10px 20px;
   margin: 10px;
   display: flex;
-  flex-direction: column;
-}
-.component *:not(h3) {
-  margin: 0 auto;
-}
+  flex-direction: column; }
+  .component *:not(h3) {
+    margin: 0 auto; }
 
 .component-header {
   font-family: Courier New, Courier, monospace;
   font-size: 1.2rem;
   color: #000057;
-  width: auto;
-}
+  width: auto; }
 
 .frm-button {
   color: white;
   background-color: #323283;
   padding: 10px 25px;
   font-size: 1.4rem;
-  font-family: 'Raleway', sans-serif;
-}
+  font-family: "Raleway", sans-serif; }
 
 .nav-link {
-  font-size: 20px;
-}
-.nav-link a {
-  color: white;
-  background-color: #323283;
-  text-decoration: none;
-  padding: 10% 15%;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1em;
-}
-.nav-link a:hover {
-  text-decoration: none !important;
-  color: #323283;
-  background-color: white;
-  font-size: 1.1em;
-  padding: 10% 14%;
-  transition: background 0.5s ease-in-out;
-}
+  font-size: 1.2rem; }
+  .nav-link a {
+    color: white;
+    background-color: #323283;
+    text-decoration: none;
+    padding: 10% 15%;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1em; }
+    .nav-link a:hover {
+      text-decoration: none !important;
+      color: #323283;
+      background-color: white;
+      font-size: 1.1em;
+      padding: 10% 14%;
+      transition: background 0.5s ease-in-out; }
 
 .page-header {
-  font-family: 'Ubuntu' sans-serif;
+  font-family: "Ubuntu" sans-serif;
   font-size: 2rem;
-  color: #323283;
-}
+  color: #323283; }
 
 .menu {
-  position: relative;
-}
-.menu .submenu {
-  display: none;
-}
-.menu:hover .submenu {
-  display: flex;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  flex-direction: column;
-}
+  position: relative; }
+  .menu .submenu {
+    display: none; }
+  .menu:hover .submenu {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column; }
+
+.article {
+  padding: 10px;
+  margin-bottom: 20px; }
+  .article .article {
+    margin: 1%; }
+
+.article-link {
+  font-size: 1.1rem; }
+  .article-link a {
+    color: white; }
+  .article-link .article-link {
+    font-size: 0.9em;
+    margin-left: 5px; }
 
 html {
   font-size: 12px;
   overflow-x: hidden;
   background-color: black;
-}
-html::after {
-  content: '';
-  background-image: url('https://imgur.com/L6GNJ1S.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.35;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  z-index: -1;
-}
+  font-family: sans-serif; }
+  html::after {
+    content: '';
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    opacity: 0.35;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  @media (max-width: 768px) {
+    html {
+      font-size: 10px !important; }
+      html::after {
+        background-color: red !important; } }
 
 body {
   margin: 20px auto;
   width: 100%;
+  font-size: 1rem;
   max-width: 1140px;
   padding: 10px;
   background: #212121;
   color: white;
-}
-body .panel {
-  background: #303030;
-}
-body .panel .sub-panel {
-  background: #424242;
-}
+  height: auto; }
+  body .panel {
+    background: #303030; }
+    body .panel .sub-panel {
+      background: #424242; }
+
+.navigation-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .navigation-panel a {
+    margin: 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white; }
+
+.toggles {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+  .toggles .checkbox label {
+    font-size: 1.2rem;
+    text-transform: uppercase; }
+
+.dynamic-wiki {
+  display: flex; }
+  .dynamic-wiki .articles {
+    max-height: 700px;
+    overflow-y: scroll;
+    flex-grow: 2; }
+    .dynamic-wiki .articles .article-header {
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .dynamic-wiki .articles .article-body {
+      font-size: 1.15rem;
+      padding: 0 10px; }
+      .dynamic-wiki .articles .article-body a {
+        background: white;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5px; }
+  .dynamic-wiki .article-nav {
+    flex-grow: 1; }
+    .dynamic-wiki .article-nav a {
+      text-decoration: none; }
+      .dynamic-wiki .article-nav a.active {
+        border-left: white solid 1px; }
 
 /*# sourceMappingURL=styles.css.map*/
