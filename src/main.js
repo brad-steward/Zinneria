@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import routes from './routes';
+import BS from './bootstrap.js';
 import './scss/styles.scss';
 
 const app = new Vue({

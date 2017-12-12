@@ -17,19 +17,19 @@ export default {
   '/zinneria': {
     href: '/zinneria',
     name: 'Zinneria',
-    parent: '',
-    children: [
-      {
-        href: '/zinneria/places',
-        name: 'Places',
-        parent: 'Zinneria'
-      },
-      {
-        href: '/zinneria/people',
-        name: 'People',
-        parent: 'Zinneria'
-      }
-    ]
+    parent: ''
+    // children: [
+    //   {
+    //     href: '/zinneria/places',
+    //     name: 'Places',
+    //     parent: 'Zinneria'
+    //   },
+    //   {
+    //     href: '/zinneria/people',
+    //     name: 'People',
+    //     parent: 'Zinneria'
+    //   }
+    // ]
   },
 
   '/calendar': {

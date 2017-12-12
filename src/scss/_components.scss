@@ -25,7 +25,7 @@
 }
 
 .nav-link {
-  font-size: 20px;
+  font-size: 1.2rem;
   a {
     color: white;
     background-color: $active-color;
@@ -65,5 +65,25 @@
       left: 0;
       flex-direction: column;
     }
+  }
+}
+
+.article {
+  padding: 10px;
+  margin-bottom: 20px;
+  .article {
+    margin: 1%;
+  }
+}
+
+.article-link {
+  font-size: 1.1rem;
+  a {
+    color: white;
+  }
+
+  .article-link {
+    font-size: 0.9em;
+    margin-left: 5px;
   }
 }
