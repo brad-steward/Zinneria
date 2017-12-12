@@ -1,11 +1,15 @@
 <template>
-  <a
+<div class="nav-link">
+<a
     v-bind:href="href"
     v-bind:class="{ active: isActive }"
     v-on:click="go"
+    class="nav-link"
   >
     <slot></slot>
   </a>
+</div>
+  
 </template>
 
 <script>
@@ -22,19 +26,10 @@ export default {
     isActive() {
       return this.href === this.$root.currentRoute;
     }
-  },
-  methods: {
-    go(event) {
-      event.preventDefault();
-      this.$root.currentRoute = this.href;
-      window.history.pushState(null, routes[this.href], this.href);
-    }
   }
 };
-</script>
 
-<style scoped>
-.active {
-  color: cornflowerblue;
-}
-</style>
+// const router = new VueRouter( {
+//   routes
+// })
+</script>

@@ -47,11 +47,13 @@ module.exports = {
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js'
-    }
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    overlay: true
   },
   devtool: '#eval-source-map'
 };

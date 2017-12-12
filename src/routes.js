@@ -1,40 +1,64 @@
-export default {
-  '/': {
-    href: '/',
-    name: 'Home',
-    parent: ''
-  },
-  '/about': {
-    href: '/about',
-    name: 'About',
-    parent: ''
-  },
-  '/characters': {
-    href: '/characters',
-    name: 'Characters',
-    parent: ''
-  },
-  '/zinneria': {
-    href: '/zinneria',
-    name: 'Zinneria',
-    parent: '',
-    children: [
+import Vue from 'vue';
+import Router from 'vue-router';
+
+import Home from './pages/Home.vue';
+import About from './pages/About.vue';
+
+Vue.use(Router);
+
+export function createRouter() {
+  return new Router({
+    mode: 'history',
+    routes: [
       {
-        href: '/zinneria/places',
-        name: 'Places',
-        parent: 'Zinneria'
+        path: '/',
+        component: Home
       },
       {
-        href: '/zinneria/people',
-        name: 'People',
-        parent: 'Zinneria'
+        path: '/about',
+        component: About
       }
     ]
-  },
+  });
+}
 
-  '/calendar': {
-    href: '/calendar',
-    name: 'Calendar',
-    parent: ''
-  }
-};
+// export default [
+//   {
+//     path: '/',
+//     component: Home,
+//     text: 'Home',
+//     parent: ''
+//   },
+//   {
+//     path: '/about',
+//     component: About,
+//     parent: ''
+//   }
+//   // {
+//   //   path: '/characters',
+//   //   component: 'Characters',
+//   //   parent: ''
+//   // },
+//   // {
+//   //   path: '/zinneria',
+//   //   component: 'Zinneria',
+//   //   parent: '',
+//   //   children: [
+//   //     {
+//   //       path: '/zinneria/places',
+//   //       component: 'Places',
+//   //       parent: 'Zinneria'
+//   //     },
+//   //     {
+//   //       path: '/zinneria/people',
+//   //       component: 'People',
+//   //       parent: 'Zinneria'
+//   //     }
+//   //   ]
+//   // },
+//   // {
+//   //   path: '/calendar',
+//   //   component: 'Calendar',
+//   //   parent: ''
+//   // }
+// ];

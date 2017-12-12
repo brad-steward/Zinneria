@@ -1,21 +1,24 @@
 import Vue from 'vue';
-import routes from './routes';
+import { createRouter } from './routes';
 import './scss/styles.scss';
 
+const router = createRouter();
+
 const app = new Vue({
+  router,
   el: '#app',
   data: {
     currentRoute: window.location.pathname
   },
   computed: {
     ViewComponent() {
-      const matchingView = routes[this.currentRoute].name;
-      return matchingView
-        ? require('./pages/' + matchingView + '.vue')
-        : require('./pages/404.vue');
+      router.push(this.currentRoute);
+      const matchingView = router.getMatchedComponents();
+      return matchingView ? matchingView[0] : require('./pages/404.vue');
     }
   },
   render(h) {
+    console.log(this.ViewComponent);
     return h(this.ViewComponent);
   },
   created: function() {

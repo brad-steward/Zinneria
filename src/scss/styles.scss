@@ -37,3 +37,12 @@ body {
     }
   }
 }
+
+.navigation-panel {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  // .submenu {
+  //   width: auto;
+  // }
+}

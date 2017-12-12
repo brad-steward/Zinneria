@@ -1,29 +1,19 @@
 <template>
   <div>
     <div class="navigation-panel panel">
-      <v-link class="menu" v-for="route in routList" :key="route.name" :href="route.href">
-          <span>{{ route.name }}</span>
-		  <div class="submenu">
-			  <v-link class="sub-panel" v-for="subMenu in route.children" :key="subMenu.name" :href="subMenu.href">{{ subMenu.name }}</v-link>
+      <!-- <router-link class="menu" v-for="route in routeList" :key="route.component" :to="route.path">
+          <span>{{ route.text }}</span>
+		  <div class="submenu sub-panel">
+			  <router-link class="" v-for="subMenu in route.children" :key="subMenu.component" :to="subMenu.path">{{ subMenu.text }}</router-link>
 		  </div>
-      </v-link>
+      </router-link> -->
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
     </div>
     <slot></slot>
   </div>
 </template>
 
 <script>
-import VLink from '../components/VLink.vue';
-import routes from '../routes';
-
-export default {
-  components: {
-    VLink
-  },
-  computed: {
-    routList() {
-      return routes;
-    }
-  }
-};
+export default {};
 </script>
