@@ -1,6 +1,6 @@
 <template>
   <div class="people">
-    <p>This is where we keep the people based information</p>
+    <h1>People</h1>
     <div class="dynamic-wiki">
       <div class="articles">
       <wiki-article v-for="article in articles" :key="article.name" :article="article"></wiki-article>
@@ -58,7 +58,7 @@ var data = {
           'This is a reformed DandDwiki class.<br><br>' +
           '<a href="http://homebrewery.naturalcrit.com/share/S1ZQcTv9Jz">Source</a>'
         },
-        
+
       ]
     },
     {
