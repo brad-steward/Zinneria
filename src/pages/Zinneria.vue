@@ -31,7 +31,7 @@ import Things from './wiki/Things.vue';
 var data = {
   content: {
     people: {
-      active: false
+      active: true
     },
     places: {
       active: false
